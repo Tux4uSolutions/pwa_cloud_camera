@@ -33,7 +33,7 @@ html, body{
 
 .taken{
     height: 500px;
-    width: 300px;
+    width: 270px;
     transition: all 0.5s ease-in;
     border: solid 3px white;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
