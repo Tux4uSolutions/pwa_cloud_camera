@@ -31,6 +31,38 @@ html, body{
     left: calc(50% - 100px);
 }
 
+#camera--upload{
+    width: 400px;
+	height:auto;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 100px;
+    left: calc(50% - 100px);
+}
+
+#camera--download{
+    width: 400px;
+	height:auto;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 200px;
+    left: calc(50% - 100px);
+}
+
 .taken{
     height: 400px;
     width: 270px;
