@@ -19,8 +19,8 @@ html, body{
 #camera--trigger{
     width: 400px;
 	height:auto;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: grey;
     font-size: 32px;
     border-radius: 30px;
     border: none;
@@ -31,8 +31,8 @@ html, body{
 #upload--trigger{
     width: 400px;
 	height:auto;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: grey;
     font-size: 32px;
     border-radius: 30px;
     border: none;
@@ -137,10 +137,11 @@ img
 
 .sec-img
 {
-	width:52px;
+	width:55px;
 	height:40px;
-	padding-left:10px;
-}
+	padding-left:10px ;
+
+	
 
 
 
