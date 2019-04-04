@@ -5,6 +5,7 @@ const cameraView = document.querySelector("#camera--view"),
       cameraOutput = document.querySelector("#camera--output"),
       cameraSensor = document.querySelector("#camera--sensor"),
       cameraTrigger = document.querySelector("#camera--trigger")
+
 	 
 /* The "cameraStart" function will access the camera and stream the video
  to the camera--view element we created.	 
@@ -21,6 +22,17 @@ function cameraStart() {
         .getUserMedia(constraints)
         .then(function(stream) {
         track = stream.getTracks()[0];
+        cameraView.srcObject = stream;
+    })
+    .catch(function(error) {
+        console.error("Oops. Something is broken.", error);
+    });
+}
+function camera2Start() {
+    navigator.mediaDevices
+        .getUserMedia(constraints)
+        .then(function(stream) {
+        track = stream.getTracks()[1];
         cameraView.srcObject = stream;
     })
     .catch(function(error) {

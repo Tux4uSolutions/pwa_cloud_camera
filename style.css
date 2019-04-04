@@ -28,6 +28,19 @@ html, body{
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
 }
+
+#camera--swap{
+    width: 100px;
+	height:auto;
+    background-color: white;
+    color: grey;
+    font-size: 32px;
+    border-radius: 30px;
+     border: solid 3px grey;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+}
 #upload--trigger{
     width: 400px;
 	height:auto;
