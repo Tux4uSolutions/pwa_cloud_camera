@@ -7,8 +7,8 @@ html, body{
 }
 #camera, #camera--view, #camera--sensor, #camera--output{
     position: fixed;
-    height: 80%;
-    width: 80%:
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -17,7 +17,7 @@ html, body{
     filter: FlipH;
 }
 #camera--trigger{
-    width: auto;
+    width: 400px;
 	height:auto;
     background-color: black;
     color: white;
@@ -27,9 +27,18 @@ html, body{
     padding: 15px 20px;
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-    position: fixed;
-    bottom: 30px;
-    left: calc(50% - 100px);
+}
+#upload--trigger{
+    width: 400px;
+	height:auto;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
 }
 
 #camera--upload{
@@ -104,6 +113,18 @@ html, body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.center2 {
+  position: absolute;
+  left: 0;
+  bottom:-650px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+.container2 {
   position: relative;
 }
 

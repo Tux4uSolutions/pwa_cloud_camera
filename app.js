@@ -2,9 +2,9 @@ var constraints = { video: { facingMode: "user" }, audio: false };
 
 // Define constants
 const cameraView = document.querySelector("#camera--view"),
-    cameraOutput = document.querySelector("#camera--output"),
-    cameraSensor = document.querySelector("#camera--sensor"),
-    cameraTrigger = document.querySelector("#camera--trigger")
+      cameraOutput = document.querySelector("#camera--output"),
+      cameraSensor = document.querySelector("#camera--sensor"),
+      cameraTrigger = document.querySelector("#camera--trigger")
 	 
 /* The "cameraStart" function will access the camera and stream the video
  to the camera--view element we created.	 
