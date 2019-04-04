@@ -2,7 +2,8 @@ html, body{
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%:
+    width: 100%;
+	background-color: #cccccc;
 }
 #camera, #camera--view, #camera--sensor, #camera--output{
     position: fixed;
@@ -75,7 +76,7 @@ html, body{
 .center {
   position: absolute;
   left: 0;
-  top: 80%;
+  top: 105%;
   width: 100%;
   text-align: center;
   font-size: 18px;
