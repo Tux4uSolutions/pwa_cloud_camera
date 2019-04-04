@@ -39,6 +39,7 @@ html, body{
     padding: 15px 20px;
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+	
 }
 
 #camera--upload{
@@ -119,12 +120,27 @@ html, body{
 .center2 {
   position: absolute;
   left: 0;
-
   width: 100%;
   text-align: center;
   font-size: 18px;
 }
 .container2 {
   position: relative;
+  top:20px;
 }
+
+img
+{
+	width:52px;
+	height:52px;
+}
+
+.sec-img
+{
+	width:52px;
+	height:40px;
+	padding-left:10px;
+}
+
+
 
