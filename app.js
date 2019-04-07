@@ -2,12 +2,12 @@ var constraints = { video: { facingMode: "user" }, audio: false };
 
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyDw1siPYACk2TsY4e79KiZ5UBVpw7yrecM",
-    authDomain: "photobooth-12ca0.firebaseapp.com",
-    databaseURL: "https://photobooth-12ca0.firebaseio.com",
-    projectId: "photobooth-12ca0",
-    storageBucket: "photobooth-12ca0.appspot.com",
-    messagingSenderId: "697333141564"
+    apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    authDomain: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    databaseURL: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    projectId: "xxxxxxxxxxxxxxxxxx",
+    storageBucket: "xxxxxxxxxxxxxxxxx",
+    messagingSenderId: "xxxxxxxxxxxxxxxxx"
   };
   firebase.initializeApp(config);
 
