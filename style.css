@@ -23,10 +23,11 @@ html, body{
     color: grey;
     font-size: 32px;
     border-radius: 30px;
-     border: solid 3px grey;
+    border: solid 3px grey;
     padding: 15px 20px;
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+	margin: 0 0 50px 0;
 }
 
 #camera--swap{
@@ -36,7 +37,7 @@ html, body{
     color: grey;
     font-size: 32px;
     border-radius: 30px;
-     border: solid 3px grey;
+    border: solid 3px grey;
     padding: 15px 20px;
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
@@ -46,14 +47,21 @@ html, body{
 	height:auto;
     background-color: white;
     color: grey;
-    font-size: 32px;
+    font-size: 18px;
     border-radius: 30px;
     border: solid 3px grey;
     padding: 15px 20px;
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-	
+	text-decoration:none;
+	padding-left:30px;
+	padding-right:30px;
+	position:relative;
+	top:-17px;
+	margin: 20px 0 0 0;
+
 }
+
 
 #camera--upload{
     width: 400px;
@@ -85,7 +93,6 @@ html, body{
     height:100px!important;
     width: 100px!important;
     transition: all 0.5s ease-in;
-    
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     top: 20px;
     right: 20px;
@@ -153,7 +160,17 @@ img
 	width:55px;
 	height:40px;
 	padding-left:10px ;
-
+}
+#submitButton
+{
+	font-size: 32px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+	
+}
 	
 
 

@@ -1,10 +1,23 @@
 var constraints = { video: { facingMode: "user" }, audio: false };
 
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDw1siPYACk2TsY4e79KiZ5UBVpw7yrecM",
+    authDomain: "photobooth-12ca0.firebaseapp.com",
+    databaseURL: "https://photobooth-12ca0.firebaseio.com",
+    projectId: "photobooth-12ca0",
+    storageBucket: "photobooth-12ca0.appspot.com",
+    messagingSenderId: "697333141564"
+  };
+  firebase.initializeApp(config);
+
 // Define constants
+
 const cameraView = document.querySelector("#camera--view"),
       cameraOutput = document.querySelector("#camera--output"),
       cameraSensor = document.querySelector("#camera--sensor"),
       cameraTrigger = document.querySelector("#camera--trigger")
+
 
 	 
 /* The "cameraStart" function will access the camera and stream the video
@@ -46,14 +59,23 @@ function camera2Start() {
  from the stream that we’ll use as our image 
  output.
 */
-
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
     cameraSensor.width = cameraView.videoWidth;
     cameraSensor.height = cameraView.videoHeight;
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
-    cameraOutput.src = cameraSensor.toDataURL("image/webp");
-    cameraOutput.classList.add("taken");
+	cameraOutput.src = cameraSensor.toDataURL("image/png");
+	cameraOutput.classList.add("taken");
+	//-------------------------------------------------------
+    var imageDataURL = cameraSensor.toDataURL("image/png");
+    document.querySelector('#camera--trigger').button = imageDataURL;
+	//-----------------------------------------------------------
+    var x = document.getElementById("upload--trigger");
+    if (x.style.display === "none") {
+    x.style.display = "";
+    } else {
+    x.style.display = "none";
+    }
 };
 
 /*
@@ -62,3 +84,44 @@ when the window is finished loading. That’ll look like this…
 */
 // Start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);
+
+/*
+  Firebase setup
+*/
+const storage = firebase.storage()
+const submitButton = document.getElementById('submitButton');
+  //var fileInput = document.getElementById('upload');   
+  submitButton.addEventListener('change', (e)=>{
+  //et file = $("#upload")[0].files[0]; 
+  let file = e.target.files[0];
+  let locationRef = storage.ref('images/' + file.name)
+  let task = locationRef.put(file)
+  
+  task.on('state_changed', 
+  function progress(snapshot){ //progress
+    let per = (snapshot.bytesTransferred / snapshot.totalBytes) *100;
+	let uploader = document.getElementById('progressBar')
+    uploader.value = per;
+  },
+  function error(error){ },
+  function complete(){
+    console.log('Done') 
+  }
+)
+})
+
+
+var button = document.getElementById('upload--trigger');
+button.addEventListener('click', function (e) {
+    var dataURL = cameraSensor.toDataURL("image/png");
+    button.href = dataURL;
+	//-----------------------------------------------------------
+    var x = document.getElementById("filesubmit");
+    if (x.style.display === "none") {
+    x.style.display = "";
+    } else {
+    x.style.display = "none";
+    }
+});
+
+

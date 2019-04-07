@@ -11,34 +11,46 @@
 <main id="camera">
 
         <!-- Camera view -->
-	<!--The video element will access the device’s camera and display the video stream.-->
-    <video id="camera--view" autoplay playsinline></video>
+		<!--The video element will access the device’s camera and display the video stream.-->
+			<video id="camera--view" autoplay playsinline></video>
 	
         <!-- Camera sensor -->
-	<!--the canvas element will grab a frame from the video stream when we tell it to,
-	and draw it to the "video" element-->
+		<!--the canvas element will grab a frame from the video stream when we tell it to,
+		and draw it to the "video" element-->
     <canvas id="camera--sensor"></canvas>
 	
-	    <!-- Camera output -->
-		<!--The "img" element will display the picture after it’s taken.-->
-		<!--(using //:0 as the source will prevent the empty image icon from
+			<!-- Camera output -->
+			<!--The "img" element will display the picture after it’s taken.-->
+			<!--(using //:0 as the source will prevent the empty image icon from
 		     showing without the browser showing a security warning)-->
     <img src="//:0" alt="" id="camera--output">
 	
 </main>
 	<div class="container2">
 		<div class="center2">
-	    <!-- Camera trigger -->
-			<!--we need this button to snap a picture with.-->
-			<button id="camera--trigger"><img src="assets/img/camera.png" /></button ><button onclick="camera2Start()" id="camera--swap"><img src="assets/img/swap.png" /></button>
-			<p></p>
-			<!-- Upload button-->
-			<button id="upload--trigger">Upload to firebase<img class="sec-img" src="assets/img/upload.png" /></button>
-			<p>pull down to refresh</p>
+			<!---swap Camera button-->
+					<!--we need this button to swap the camera.-->
+		              <button onclick="camera2Start()" id="camera--swap"><img src="assets/img/swap.png" /></button>
+	                <!-- Camera trigger -->
+			     <!--we need this button to snap a picture with.-->
+				<button id="camera--trigger"  download="glorious_selfie.png"><img src="assets/img/camera.png" /></button >
+           <!--Download Image Button--->
+		   	  <!--we need this button for Downloading capture "image"  -->
+				<a style="display:none" href="#" id="upload--trigger" class="ex" download="picture.png">Download Image</a>
+	              <!-- Upload Process-->
+				   <div id="filesubmit" style="display:none">
+				    <label for="submit">Select Image to upload</label>
+                        <input type="file" value="upload" id="submitButton"  accept="image/*" />
+						<p><progress value="0" max="100" id="progressBar">0%</progress></p>
+
+			       <!--<a href="#" class="button" id="btn-download" download="my-file-name.png">Download</a>-->
+			</div>
+			<!--<p>pull down to refresh</p>-->
 		</div>
 	</div>
 
-
+<!----firebase----->
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
 <!-- Reference to your JavaScript file -->
 <script src="app.js"></script> 
 
